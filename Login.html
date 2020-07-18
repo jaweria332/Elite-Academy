@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Login
+    </title>
+    <link rel="stylesheet" href="D:\sidra\css\fontawesome-free-5.13.0-web\css\all.css"> 
+    <style>
+      *{
+        padding: 0;
+        margin:0;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 18px;
+    }
+    #navbar{
+        height: 100px;
+        width: 100%;
+        background: #222859;
+        color: white;
+    }
+    #navbar img{
+        height: 50px;
+        padding-left:20px;
+        margin: 10px;
+        float:left;
+    }
+    #navbar ul{
+        float: right;
+        margin-top:5px;
+        margin-right: 20px;
+    }
+    #navbar ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+    #navbar ul li a{
+        color:white;
+        text-decoration: none;
+    }
+    #navbar ul li:hover{
+        background: linear-gradient(#d04f83,#ce90a9);
+    }
+  h1{
+    display: inline-block;
+    top:2%;
+    left:7%;
+    position: absolute;
+    color:#C75187;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+        form{
+      height:400px;
+      width: 45%;
+      top:13%;
+      position: absolute;
+      margin-top: 30px;
+      margin-left:25%;
+     border-style: outset;
+      border-width: 5px;
+     padding-left:10%;
+     font-family: sans-serif;
+     background-color: #dbdbda;
+     
+  }
+  .before{
+           width:55px;
+           height:2px;
+           background-color:rgb(18, 35, 56);
+           left:38%;
+           position: absolute;
+           display: inline-block;
+         }
+         .logo2{
+          color:rgb(18, 35, 56);
+          font-size:22px;
+         left:49%;
+         position: absolute;
+          display:inline-block;
+         }
+          .after{
+           width:55px;
+           height:2px;
+           left:54%;
+            position: absolute;
+           background-color:rgb(3, 21, 43);
+           display:inline-block;
+         }
+         h2{
+            color:#C75187;
+             font-family: sans-serif;
+            padding-left: 16%;
+        
+         }
+         input[type=text], input[type=Password]{
+                width: 70%;
+                padding: 15px;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+               }
+               img{
+                opacity: 0.3;
+                }
+
+               .login{
+       
+                  background-color: #C75187;
+                  color:whitesmoke;
+                  font-family: sans-serif;
+                  font-variant: small-caps;
+                  font-weight: lighter;
+                  font-size: 20px;
+                  width:310px;
+                  height: 40px;
+                  border-style: outset;
+                  border-color:#C75187 ;
+                  
+               }
+               .login:hover{
+                 background-color: #676f67;
+                 font-weight: bold;
+                 height: 43px;
+                 border-color:#676f67 ;
+               }
+               #footer{
+        background: #222859;
+        color: white;
+        text-align: center;
+    }
+    #footer ul li{
+        display: inline-block;
+        padding:10px;
+        margin: 10px;
+    }
+               
+    </style>
+    <body>
+      <div id="header">
+        <nav id="navbar">
+            <img src="Elite Logo.png">
+            <ul class="headerList">
+                <li><a href="#services">Our services</a></li>
+                <li><a href="#trainer">Trainers</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#userReview">User reviews</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+        <img src="download.jpg" width=1334 height=570>
+        <form>
+            <h2>LOGIN FORM</h2><hr class="before"><i class="fas fa-star logo2"></i>
+            <hr class="after">
+            <br /><br />
+           
+            <label for =" Name:"><b>Name:</b></label><br>
+            <input type="text" name="Name" size="40" maxlength="30" required="required" placeholder="Enter  Name">
+              <br /><br />
+              
+              <label for =" Password"><b>Password:</b></label><br>
+              <input type="password" name="Password" size="40" maxlength="30" required="required" placeholder="Enter Password">
+                <br /><br />
+      
+               <button class="login">Login</button><br><br>
+               Not Registered??<a href="Registration.html">Registration Link</a>
+        </form>
+        
+        <div id="footer">
+          <ul>
+              <li>Copy Right &copy;</li>
+              <li><i class="fa fa-book" aria-hidden="true"></i><a="#">  Privacy policy</a></li>
+              <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">  Contact us</a></li>
+          </ul>
+      </div>
+    </body>
+    </html>
