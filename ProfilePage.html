@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>123</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite academy</title>
+    <style>
+        *{
+        padding: 0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: poppins;
+    }
+    #navbar{
+        height: 100px;
+        width: 100%;
+        background: #222859;
+        color: white;
+    }
+    #navbar img{
+        height: 50px;
+        padding-left:20px;
+        margin: 10px;
+        float:left;
+    }
+    #navbar ul{
+        float: right;
+        margin-top:5px;
+        margin-right: 20px;
+    }
+    #navbar ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+    #navbar ul li a{
+        color:white;
+        text-decoration: none;
+    }
+    #navbar ul li:hover{
+        background: linear-gradient(#d04f83,#ce90a9);
+    }
+    .main{
+        background: linear-gradient(rgb(108, 92, 231, 0.7),rgba(253, 83, 165, 0.702),rgb(108, 92, 231, 0.7));
+        -webkit-background-size:cover;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+    }
+    .title h1{
+        font-family:'Verdana', sans-serif;
+        font-size: 52px;
+        margin-left: 60px;
+    }
+    .title p{
+        margin-top: 57px;
+        margin-left: 77px;
+        line-height: 30px;
+        font-size: 24px;
+        color: black;
+        font-style: bold;
+    }
+    .container{
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        width: 30%;
+        position: absolute;
+        left: 77%;
+        top: 60%;
+        transform: translate(-50%,-50%);
+        text-align:center;
+        box-shadow: 0 6px 8px rgba(0,0,0,.1);
+        transition: all .4s;
+        }
+    .container h2{
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: #4686f6;
+    }
+    .container input{
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        width: calc(100% - 40px);
+        font-size: 18px;
+    }
+    .container ul li{
+        list-style-type: none;
+        padding: 14px 0;
+        background-color: #cfd8dc;
+        margin-left: 30px ;
+        margin-right: 30px;
+        transition: all .4s;
+    }
+    .container ul a{
+        color: #212121;
+        text-decoration: none;
+    }
+    .container ul a:hover{
+        color:#d1111b;
+    }
+    /* For desktop dispaly*/
+    @media (max-width: 974px){
+        #navbar{
+            height: 175px;
+            width: 100%;
+            text-align: center;
+        }
+        #navbar img{
+            float:none;
+            clear: right;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #navbar ul{
+            width: 100%;
+            text-align: center;
+        }
+        #navbar ul li a{
+            margin-top: 0px;
+            margin-bottom:20px;
+        }
+    }
+    /*For mobile display*/
+    @media (max-width: 860px) {
+        #navbar{
+        height: 70px;
+        width: 100%;
+        background: #222859;
+        color: white;
+    }
+    .body{
+        background: white;
+    }
+    .main{
+        background: white;
+    }
+    .container{
+        background: linear-gradient(rgb(108, 92, 231, 0.7),rgba(253, 83, 165, 0.702),rgb(108, 92, 231, 0.7));
+    }
+    .container h2{
+        color: black;
+    }
+    #navbar img{
+        height: 40px;
+        padding-left:15px;
+        margin: 10px;
+        float:left;
+    }
+    #navbar ul{
+        float: right;
+        margin-top: 20px;
+        margin-right: -35%;
+    }
+    #navbar ul li{
+        list-style: none;
+        display: inline;
+        padding: 20px;
+        margin: 10px;
+        text-align: right;
+    }
+        .title h1{
+        font-size: 40px;
+        text-align: center;
+        margin-left: 50px;
+    }
+        .title p{
+        margin-top: 50px;
+        line-height: 30px;
+        font-size: 18px;
+        color: black;
+        text-align: center;
+    }
+        .container{
+        padding: 7px 40px;
+        border-radius: 6px;
+        background-color: #fff;
+        width: 58%;
+        position: absolute;
+        left: 50%;
+        top: 120%;
+        transform: translate(-50%,-50%);
+        text-align:center;
+        box-shadow: 0 6px 8px rgba(0,0,0,.1);
+        transition: all .4s;
+        }
+        .container ul li{
+        list-style-type: none;
+        padding: 14px 10px;
+        background-color: #cfd8dc;
+        margin-right: 39px;
+        transition: all .4s;
+        }
+        .container h2{
+        font-size: 16px;
+        font-style: bold;
+        }
+        .container input{
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        width: calc(100% - 30px);
+        font-size: 12px;
+        width: 200px;
+    }
+    }
+    </style>
+</head>
+<body>
+        <nav id="navbar">
+            <img src="Elite Logo.png">
+            <ul class="headerList">
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="title">
+                <h1><br><br>Give a Start To Your <br>Brighter Future...</h1>
+                <p><i>Join any service from the list to get guidance.<br> Most of the services are free of cost<br> but some
+                    required payments.</i>
+                </p><br><br>
+            </div>
+            <div class="container">
+                <h2>Service Catagory</h2>
+                <input id="search" onkeyup="filter()" type="text" placeholder="Find service for you here....">
+                <ul id="Menu">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Medical</a></li>
+                    <li><a href="#">Engineering</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Mathematics</a></li>
+                    <li><a href="#">English Linguistic</a></li>
+                </ul><br>
+            </div>
+        </div>
+            <script>
+                function filter(){
+        
+        var filterValue, input, ul,li,a,i;
+         input = document.getElementById("search");
+         filterValue = input.value.toUpperCase();
+        ul = document.getElementById("Menu");
+         li = ul.getElementsByTagName("li");
+            
+            for (i = 0 ; i < li.length ; i++){
+                a = li[i].getElementsByTagName("a")[0];
+                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                    li[i].style.display = "";
+                    
+                }else{
+                    li[i].style.display = "none";
+                }
+            }
+        }
+            </script>
+        </div>
+</body>
+</html>
