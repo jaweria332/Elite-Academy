@@ -223,12 +223,15 @@ input[type=text], input[type=Password]{
         background: #f1f1f1;
       }
 #footer{
-
-top:150%;
-position: absolute;
-width:483px;}
-
-}
+        background: #222859;
+        color: white;
+        text-align: center;
+    }
+    #footer ul li{
+        display: inline-block;
+        padding:10px;
+        margin: 10px;
+    }
     </style>
 </head>
 <body>
@@ -271,12 +274,12 @@ width:483px;}
 
     </form>
     <div id="footer">
-      <ul>
-          <li>Copy Right &copy;</li>
-          <li><i class="fa fa-book" aria-hidden="true"></i><a="#">  Privacy policy</a></li>
-          <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">  Contact us</a></li>
-      </ul>
-  </div>
+        <ul>
+            <li>Copy Right &copy;</li>
+            <li><i class="fa fa-book" aria-hidden="true"></i><a="#">  Privacy policy</a></li>
+            <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">  Contact us</a></li>
+        </ul>
+    </div>
 
 <?php 
 if($_GET['submit'])
