@@ -150,21 +150,16 @@ error_reporting(0);
       border: 2px solid #d04f83;
       background: transparent;
     }
-    #footer{
-      width:100%;
-      background-color: #222859;
-      color: white;
-      }
-      #footer ul li{
-        height:60px;
-        display: inline-block;
-        list-style-type: none;
-        padding:10px;
-        margin-top:20px;
-        margin-left: 10px;
-        margin-right:10px;
+     #footer{
+        background: #222859;
         color: white;
-      }
+        text-align: center;
+    }
+    #footer ul li{
+        display: inline-block;
+        padding:10px;
+        margin: 10px;
+    }
   </style>
   </head>
     <body>
@@ -200,12 +195,12 @@ error_reporting(0);
     </div>
 <br><br>
         <div id="footer">
-          <ul>
-              <li>Copy Right &copy;</li>
-              <li><i class="fa fa-book" aria-hidden="true"></i><a="#">Privacy policy</a></li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">Contact us</a></li>
-          </ul>
-      </div>
+        <ul>
+            <li>Copy Right &copy;</li>
+            <li><i class="fa fa-book" aria-hidden="true"></i><a="#">  Privacy policy</a></li>
+            <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">  Contact us</a></li>
+        </ul>
+    </div>
 <?php
       if(($_GET['submit'] ) ){
           $pass=$_GET['Password'];
