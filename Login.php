@@ -185,20 +185,15 @@ if(isset($_POST['Email'])){
       background: transparent;
     }
     #footer{
-      width:100%;
-      background-color: #222859;
-      color: white;
-      }
-      #footer ul li{
-        height:60px;
-        display: inline-block;
-        list-style-type: none;
-        padding:10px;
-        margin-top:20px;
-        margin-left: 10px;
-        margin-right:10px;
+        background: #222859;
         color: white;
-      }
+        text-align: center;
+    }
+    #footer ul li{
+        display: inline-block;
+        padding:10px;
+        margin: 10px;
+    }
   </style>
   </head>
     <body>
@@ -235,12 +230,11 @@ if(isset($_POST['Email'])){
       </form>
     </div>
 <br><br>
-        <div id="footer">
-          <ul>
-              <li>Copy Right &copy;</li>
-              <li><i class="fa fa-book" aria-hidden="true"></i><a="#">Privacy policy</a></li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">Contact us</a></li>
-          </ul>
-      </div>
+           <div id="footer">
+        <ul>
+            <li>Copy Right &copy;</li>
+            <li><i class="fa fa-book" aria-hidden="true"></i><a="#">  Privacy policy</a></li>
+            <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a="#">  Contact us</a></li>
+        </ul>
     </body>
     </html>
