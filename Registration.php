@@ -292,7 +292,7 @@ if($_GET['submit'])
    
     if($un!="" && $em!="" && $inst!="" && $intr!="" && $pass!=""){
         $query="INSERT INTO USERINFO VALUES('$un', '$em', '$inst', '$intr','$pass')";
-        $data=mysqli_query($conn,$query);
+        $data=mysqli_query($conn,$query); 
 
         if($data){
             echo "Data inserted successfully";
