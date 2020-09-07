@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <head>
@@ -5,6 +6,7 @@
         Login
     </title>
     <link rel="stylesheet" href="D:\sidra\css\fontawesome-free-5.13.0-web\css\all.css"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style>
       *{
         padding: 0;
@@ -57,7 +59,7 @@
       width: 45%;
       top:13%;
       position: absolute;
-      margin-top: 30px;
+      margin-top: 80px;
       margin-left:25%;
      border-style: outset;
       border-width: 5px;
@@ -67,32 +69,20 @@
      
   }
   .before{
-           width:55px;
-           height:2px;
+           width:100px;
+           height:4px;
            background-color:rgb(18, 35, 56);
-           left:38%;
+           left:43%;
+           top:11%;
            position: absolute;
            display: inline-block;
          }
-         .logo2{
-          color:rgb(18, 35, 56);
-          font-size:22px;
-         left:49%;
-         position: absolute;
-          display:inline-block;
-         }
-          .after{
-           width:55px;
-           height:2px;
-           left:54%;
-            position: absolute;
-           background-color:rgb(3, 21, 43);
-           display:inline-block;
-         }
+         
          h2{
             color:#C75187;
              font-family: sans-serif;
-            padding-left: 16%;
+            padding-left: 22%;
+            font-size: 25px;
         
          }
          input[type=text], input[type=Password]{
@@ -102,9 +92,7 @@
                 border: none;
                 background: #f1f1f1;
                }
-               img{
-                opacity: 0.3;
-                }
+               
 
                .login{
        
@@ -134,13 +122,115 @@
     #footer ul li{
         display: inline-block;
         padding:10px;
-        margin: 10px;
-    }
+        margin: 10px;}
+
+        label #btn ,
+        label #cancel{
+          color:white;
+          font-size:30px;
+          float:right;
+          line-height: 80px;
+          margin-right: 40px;
+          cursor:pointer;
+          display:none;
+
+        }
+        #check{
+          display:none;
+
+        }
+        @media (max-width:860px){
+         
+        label #btn
+        {
+          display:block;
+        }
+        nav ul{
+          position: fixed;
+          width: 100%;
+          height: 165px;
+          background-color:#313a6d;
+          top:80px;
+          left:-100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display:block;
+          margin:50px 0;
+        
+        }
+        nav li a{
+            font-size:17px;
+            
+        }
+        #check:checked ~ ul{
+          left:0;
+
+        }
+        #check:checked ~label #btn{
+         display:none;
+          
+        }
+        #check:checked ~label #cancel{
+         display:block;
+          
+        }
+        form{
+          height:315px;
+          width: 90%;
+          top:35%;
+          position: absolute;
+          padding-left:50px;
+          margin-left:5%;
+        }
+        .pic{
+          width:483px;
+          height:588px;
+        }
+        .login{
+       
+       background-color: #C75187;
+       color:whitesmoke;
+       font-family: sans-serif;
+       font-variant: small-caps;
+       font-weight: lighter;
+       font-size: 20px;
+       width:290px;
+       height: 28px;
+       border-style: outset;
+       border-color:#C75187 ;
+        }
+        h2{
+
+            padding-left: 29%;
+        
+        }
+        input[type=text], input[type=Password]{
+                width: 80%;
+                height:10%;
+                padding: 15px;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+               }
+               #footer{
+          
+                 top:100%;
+                position: absolute;
+                width:483px;}
+
+        }
                
     </style>
     <body>
       <div id="header">
         <nav id="navbar">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times"  id="cancel"></i>
+          </label>
             <img src="Elite Logo.png">
             <ul class="headerList">
                 <li><a href="#services">Our services</a></li>
@@ -151,24 +241,23 @@
             </ul>
         </nav>
     </div>
-        <img src="download.jpg" width=1334 height=570>
-        <form>
-            <h2>LOGIN FORM</h2><hr class="before"><i class="fas fa-star logo2"></i>
-            <hr class="after">
+    <img src="download.jpg" class="pic" width=1334 height=570>
+    <form>
+        <h2>LOGIN FORM</h2><hr class="before">
+        <br /><br />
+       
+        <label for =" Name:"><b>Name:</b></label><br>
+        <input type="text" name="Name" size="40" maxlength="30" required="required" placeholder="Enter  Name">
+          <br /><br />
+          
+          <label for =" Password"><b>Password:</b></label><br>
+          <input type="password" name="Password" size="40" maxlength="30" required="required" placeholder="Enter Password">
             <br /><br />
-           
-            <label for =" Name:"><b>Name:</b></label><br>
-            <input type="text" name="Name" size="40" maxlength="30" required="required" placeholder="Enter  Name">
-              <br /><br />
-              
-              <label for =" Password"><b>Password:</b></label><br>
-              <input type="password" name="Password" size="40" maxlength="30" required="required" placeholder="Enter Password">
-                <br /><br />
-      
-               <button class="login">Login</button><br><br>
-               Not Registered??<a href="Registration.html">Registration Link</a>
-        </form>
-        
+  
+           <button class="login">Login</button><br><br>
+           Not Registered??<a href="Registration.html">Registration Link</a>
+    </form>
+  
         <div id="footer">
           <ul>
               <li>Copy Right &copy;</li>

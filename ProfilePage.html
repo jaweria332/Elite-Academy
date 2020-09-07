@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>123</title>
+    <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite academy</title>
     <style>
@@ -103,8 +103,101 @@
     .container ul a:hover{
         color:#d1111b;
     }
+    .main#blur.active{
+        filter: blur(20px);
+        pointer-events: none;
+        user-select: none;
+
+    }
+    #popup{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0,0,0,.30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    #popup.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    #popup h4{
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #popup a{
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 25px;
+        line-height: 50px;
+        color: #fc4848;
+    }
+    #popup a:hover{
+        background: #d04f83;
+        color:black;
+    }
+    #popup #close{
+        border: 5px solid #0000;
+        font-size: 22;
+        border-radius: 10px;
+        background: #000;
+        color:#fff;
+        
+    }
+    #popup #close:hover{
+        background: linear-gradient(rgb(108, 92, 231, 0.7),rgba(253, 83, 165, 0.702));
+    }
+    #customAlert{
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        
+    }
+    #box{
+
+        border-radius: 5px;
+        margin-top: 100px;
+        margin-left: 400px;
+        height: 150px;
+        width:500px;
+        text-align: center;
+        box-shadow: 2px 2px 8px black;
+        background-color: white;
+
+    }
+    #confirmbtn{
+        height: 25px;
+        width: 80px;
+        border-radius: 8px;
+        background-color: black;
+        color:wheat;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-left: 400px;
+    }
+    #content{
+        top:20%;
+        position: relative;
+        height: 400px;
+         color:#fa0b9a;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 20px;   
+    }
+    #content h3{
+        color: #353434;
+    }
     /* For desktop dispaly*/
-    @media screen and (max-width: 974px){
+    @media (max-width: 974px){
         #navbar{
             height: 175px;
             width: 100%;
@@ -125,18 +218,17 @@
         #navbar ul li a{
             margin-top: 0px;
             margin-bottom:20px;
+            font-size: 18px;
+            font-weight: bolder;
         }
     }
     /*For mobile display*/
-    @media screen and (max-width: 860px) {
+    @media (max-width: 860px) {
         #navbar{
         height: 70px;
         width: 100%;
         background: #222859;
         color: white;
-    }
-    .body{
-        background: white;
     }
     .main{
         background: white;
@@ -156,7 +248,8 @@
     #navbar ul{
         float: right;
         margin-top: 20px;
-        margin-right: -35%;
+        margin-right: -40%;
+        
     }
     #navbar ul li{
         list-style: none;
@@ -208,6 +301,64 @@
         font-size: 12px;
         width: 200px;
     }
+    @media (max-width: 500px){
+        .container{
+        padding: 7px 40px;
+        width: 58%;
+        position: absolute;
+        left: 50%;
+        top: 130%;
+        transform: translate(-50%,-50%);
+        }
+        .container ul li{
+        list-style-type: none;
+        padding: 14px 10px;
+        background-color: #cfd8dc;
+        margin-right: 39px;
+        transition: all .4s;
+        }
+        .container input{
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        width: calc(100% - 50px);
+        font-size: 12px;
+        width: 200px;
+    }
+    @media (max-width: 648) {
+        #navbar ul{
+        float: right;
+        margin-top: 10px;
+        left: -100%;
+        text-align: center;
+        z-index: 10;
+    }
+    .main{
+        background: #af4e5e;
+    }
+    #navbar ul li{
+        list-style: none;
+        display: inline;
+        padding: 20px;
+        margin: 20px;
+        text-align: right;
+    }
+    #navbar ul li{
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    }
+    @media (max-width: 414px){
+        .container{
+            top: 138%;
+        }
+        .title h1{
+            font-size:30;
+        }
+        .title p{
+            font-size: 14;
+        }
+    }
+    }
     }
     </style>
 </head>
@@ -218,7 +369,7 @@
                 <li><a href="index.html">Log Out</a></li>
             </ul>
         </nav>
-        <div class="main">
+        <div class="main" id="blur">
             <div class="title">
                 <h1><br><br>Give a Start To Your <br>Brighter Future...</h1>
                 <p><i>Join any service from the list to get guidance.<br> Most of the services are free of cost<br> but some
@@ -229,17 +380,51 @@
                 <h2>Service Catagory</h2>
                 <input id="search" onkeyup="filter()" type="text" placeholder="Find service for you here....">
                 <ul id="Menu">
-                    <li><a href="#">Computer Science</a></li>
-                    <li><a href="#">Medical</a></li>
-                    <li><a href="#">Engineering</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Accounting</a></li>
-                    <li><a href="#">Mathematics</a></li>
-                    <li><a href="#">English Linguistic</a></li>
+                    <li><a href="#" onclick="toggle()">Computer Science</a></li>
+                    <li><a href="#" onclick="toggle()">IT Engineering</a></li>
+                    <li><a href="#" onclick="toggle()">Mechanical Engineering</a></li>
+                    <li><a href="#" onclick="toggle()">Business Communication </a></li>
+                    <li><a href="#" onclick="toggle()">Chemical Engineering</a></li>
+                    <li><a href="#" onclick="toggle()">Mathematics</a></li>
+                    <li><a href="#" onclick="toggle()">Bio Medical</a></li>
                 </ul><br>
             </div>
         </div>
+        <div id="popup">
+            <h4>WANT GUIDANCE FOR</h4>
+            <li><a href="#" onclick="showcustom()">Book Guidance</a></li>
+            <li><a href="#" onclick="showcustom()">Institute Guidance</a></li>
+            <li><a href="#" onclick="showcustom()">Aptitude Test Guidance</a></li>
+            <li><a href="#" onclick="showcustom()">Tutorial/Blog Guidance</a></li>
+            <a href="#" onclick="toggle()" id=close>CLOSE</a>
+        </div>
+        <div id="customAlert">
+            <div id="box">
+                <div id="content">
+                    <h3>THANK YOU</h3><br>
+                    <p><b>WE WILL RESPOND YOU SOON</b></p>
+                    <button type="button" id="confirmbtn" onclick="hidealert()">ok</button><br>
+                </div>
+            </div>
+        </div>
+        <script>
+            var customalert=document.getElementById("customAlert");
+            function showcustom()
+            {
+           customalert.style.display='block';
+            }
+            function hidealert(){
+                customalert.style.display='none';
+            }
+        </script>
             <script>
+                function toggle(){
+                    var blur= document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup= document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+                
                 function filter(){
         
         var filterValue, input, ul,li,a,i;
